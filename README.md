@@ -44,6 +44,26 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+## Launch DB
+
+```bash
+$ docker compose up -d
+```
+
+## migrate DB
+
+```bash
+# Create the prisma client
+$ npx prisma contract emit
+
+# Create the table
+$ npx prisma migration plan
+$ npx prisma db migrate
+
+# Inspect the tables
+$ npx prisma db verify
+```
+
 ## Run tests
 
 ```bash
